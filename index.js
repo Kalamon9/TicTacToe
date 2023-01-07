@@ -75,6 +75,34 @@ for (let i = 0; i < boxes.length; i++)
         boxes[l].classList.add("won");
       }
       winner();
+    } else if (value1 != "" && value1 === value4 && value1 === value7) {
+      // for (let i = 0; i <= 6; i + 3) {
+      //   boxes[i].classList.add("won");
+      // }
+      boxes[0].classList.add("won");
+      boxes[3].classList.add("won");
+      boxes[6].classList.add("won");
+      winner();
+    } else if (value2 != "" && value2 === value5 && value2 === value8) {
+      boxes[1].classList.add("won");
+      boxes[4].classList.add("won");
+      boxes[7].classList.add("won");
+      winner();
+    } else if (value3 != "" && value3 === value6 && value3 === value9) {
+      boxes[2].classList.add("won");
+      boxes[5].classList.add("won");
+      boxes[8].classList.add("won");
+      winner();
+    } else if (value1 != "" && value1 === value5 && value1 === value9) {
+      boxes[0].classList.add("won");
+      boxes[4].classList.add("won");
+      boxes[8].classList.add("won");
+      winner();
+    } else if (value3 != "" && value3 === value5 && value3 === value7) {
+      boxes[2].classList.add("won");
+      boxes[4].classList.add("won");
+      boxes[6].classList.add("won");
+      winner();
     }
   });
 
