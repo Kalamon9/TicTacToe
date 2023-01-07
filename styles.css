@@ -3,9 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+@font-face {
+  font-family: LucidaHandwriting;
+  src: url(LucidaHandwritingItalic.ttf);
+  font-weight: italic;
+}
 
 body {
-  font-family: "Lucida Handwriting", cursive;
+  font-family: LucidaHandwriting;
   height: 100vh;
   color: #fff;
   background-color: #024152;
@@ -37,7 +42,7 @@ h1 + div > div {
   width: 20vmin;
   border-radius: 8px;
   font-size: 4.5rem;
-  color: #753682;
+  color: #19cee0;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 
   display: flex;
@@ -54,6 +59,7 @@ h1 + div > div {
 }
 .won {
   background-color: #bf2e34;
+  color: #fff;
 }
 button {
   color: #fff;
