@@ -34,16 +34,24 @@ const winner = () => {
   disableBoxes();
 };
 
+function isDraw() {
+  return [...boxes].every((element) => {
+    return (
+      !element.classList.contains("won") && element.classList.contains("active")
+    );
+  });
+}
+console.log(isDraw());
+
 for (let i = 0; i < boxes.length; i++)
   boxes[i].addEventListener("click", function () {
     boxes[i].classList.add("active");
+    boxes[i].classList.add("disabled");
     if (activePlayer === "X") {
       boxes[i].textContent = "X";
-      boxes[i].classList.add("disabled");
       activePlayer = "O";
     } else {
       boxes[i].textContent = "O";
-      boxes[i].classList.add("disabled");
       activePlayer = "X";
     }
 
@@ -59,8 +67,8 @@ for (let i = 0; i < boxes.length; i++)
 
     const checkWin = () => {
       if (value1 != "" && value1 === value2 && value1 === value3) {
-        for (let j = 0; j <= 2; j++) {
-          boxes[j].classList.add("won");
+        for (let i = 0; i <= 2; i++) {
+          boxes[i].classList.add("won");
         }
         //   boxes[0].classList.add("won");
         //   boxes[1].classList.add("won");
@@ -101,6 +109,8 @@ for (let i = 0; i < boxes.length; i++)
           boxes[i].classList.add("won");
         }
         winner();
+      } else if (isDraw()) {
+        document.querySelector("h1").textContent = "Draw! Play again";
       }
     };
     checkWin();
