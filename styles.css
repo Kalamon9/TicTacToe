@@ -30,8 +30,8 @@ h1 {
 }
 
 h1 + div {
-  width: 64vmin;
-  height: 64vmin;
+  width: 61vmin;
+  height: 61vmin;
   display: flex;
   flex-wrap: wrap;
   gap: 2vmin;
@@ -41,8 +41,8 @@ h1 + div {
 h1 + div > div {
   background-color: rgba(255, 255, 255, 0.7);
   color: transparent;
-  height: 20vmin;
-  width: 20vmin;
+  height: 19vmin;
+  width: 19vmin;
   border-radius: 8px;
   font-size: 4.5rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
@@ -87,22 +87,44 @@ button:hover {
   background-color: white;
   color: #024152;
   box-shadow: 0 1rem 2rem rgba(250, 250, 250, 0.4);
-  outline-offset: 0;
 }
-
 button:active {
   scale: 1.05;
+}
+button:focus {
+  outline: thick double rgba(25, 206, 224, 0.6);
 }
 
 @media only screen and (max-width: 425px) {
   h1 {
     font-size: 2.5rem;
   }
+  h1 + div {
+    width: 64vmin;
+    height: 64vmin;
+  }
   h1 + div > div {
     font-size: 3.5rem;
+    height: 20vmin;
+    width: 20vmin;
   }
   button {
     padding: 0.7rem 1.5rem;
     bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 773px) {
+  h1 {
+    margin-top: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 916px) and (orientation: landscape) {
+  button {
+    left: auto;
+    right: 2rem;
+    bottom: 25%;
+    transform: translateY(-50%);
   }
 }

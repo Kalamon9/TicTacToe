@@ -32,6 +32,7 @@ const disableBoxes = () => {
 const winner = () => {
   winnerMessage();
   disableBoxes();
+  document.querySelector("button").focus();
 };
 
 function isDraw() {
@@ -111,6 +112,7 @@ for (let i = 0; i < boxes.length; i++)
         winner();
       } else if (isDraw()) {
         document.querySelector("h1").textContent = "Draw! Play again";
+        document.querySelector("button").focus();
       }
     };
     checkWin();
