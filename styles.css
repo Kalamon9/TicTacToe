@@ -21,6 +21,7 @@ body {
 }
 main {
   padding: 1rem;
+  position: relative;
 }
 h1 {
   text-align: center;
@@ -76,7 +77,7 @@ button {
   background-color: transparent;
   font-size: 1rem;
   position: absolute;
-  bottom: 1rem;
+  bottom: -4rem;
   left: 50%;
   transform: translateX(-50%);
   transition: all 0.7s;
@@ -120,7 +121,7 @@ button:focus {
   }
 }
 
-@media screen and (max-width: 955px) and (orientation: landscape) {
+@media screen and (max-width: 998px) and (orientation: landscape) {
   button {
     left: auto;
     right: 2rem;
