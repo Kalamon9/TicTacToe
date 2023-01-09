@@ -103,6 +103,7 @@ button:focus {
   h1 + div {
     width: 64vmin;
     height: 64vmin;
+    margin-top: 2rem;
   }
   h1 + div > div {
     font-size: 3.5rem;
@@ -111,17 +112,17 @@ button:focus {
   }
   button {
     padding: 0.7rem 1.5rem;
-    bottom: 2rem;
+    bottom: -7rem;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 773px) {
+/* @media screen and (min-width: 768px) and (max-width: 773px) {
   h1 {
     margin-top: 0.5rem;
   }
-}
+} */
 
-@media screen and (max-width: 998px) and (orientation: landscape) {
+@media screen and (max-width: 915px) and (orientation: landscape) {
   button {
     left: auto;
     right: 2rem;
