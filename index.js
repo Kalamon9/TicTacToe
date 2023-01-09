@@ -120,6 +120,7 @@ for (let i = 0; i < boxes.length; i++)
 
 //play again
 document.querySelector("button").addEventListener("click", function () {
+  document.querySelector("button").blur();
   boxes.forEach((element) => {
     document.querySelector("h1").textContent = "Tic Tac Toe";
     element.textContent = "";
